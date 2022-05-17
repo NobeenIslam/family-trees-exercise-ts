@@ -1,6 +1,19 @@
 import { Person } from "../personTypes";
 
 export function createStarkTree(): Person {
-
-    return { name: "STARK: YOU NEED TO IMPLEMENT THIS", children: [] };
+    const eddardsKids: Person[] = [
+        { name: 'Rickon', children: [] },
+        { name: 'Bran', children: [] },
+        { name: 'Arya', children: [] },
+        { name: 'Sansa', children: [] },
+        { name: 'Robb', children: [] },
+        { name: 'Jon', children: [] },
+    ];
+    const rickardsKids: Person[] = [
+        { name: 'Benjen', children: [] },
+        { name: 'Lyanna', children: [] },
+        { name: 'Eddard', children: eddardsKids },
+        { name: 'Brandon', children: [] },
+    ];
+    return { name: 'Rickard', children: rickardsKids };
 }
